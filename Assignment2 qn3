@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10], evenArr[10], oddArr[10];
+    int evenCount = 0, oddCount = 0;
+    
+    // Input the array elements
+    printf("Enter 10 integers: ");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    // Find even and odd elements and store them in separate arrays
+    for (int i = 0; i < 10; i++) {
+        if (arr[i] % 2 == 0) {
+            evenArr[evenCount] = arr[i];
+            evenCount++;
+        } else {
+            oddArr[oddCount] = arr[i];
+            oddCount++;
+        }
+    }
+    
+    // Display the even elements array
+    printf("\nEven elements array: ");
+    for (int i = 0; i < evenCount; i++) {
+        printf("%d ", evenArr[i]);
+    }
+    
+    // Display the odd elements array
+    printf("\nOdd elements array: ");
+    for (int i = 0; i < oddCount; i++) {
+        printf("%d ", oddArr[i]);
+    }
+    
+    return 0;
+}
